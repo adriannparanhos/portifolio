@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portifolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src=""></script>
+</head>
+<body>
+
+    <div class="container-header">
+        <header class="bg-scroll" id="myHeader">
+            <nav>
+                <ul>
+                    <li><a href="#" data-text="Sobre mim">Sobre mim</a></li>
+                    <li><a href="#" data-text="Habilidades">Habilidades</a></li>
+                    <li><a href="#" data-text="Projetos">Projetos</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+    
+    <section class="section-apresentacao">
+        <div class="apresentacao">
+            <h1>Ola, Sou Adriann Postigo, <br> Desenvolvedor FullStack</h1>
+        </div>
+    </section>
+
+    <h1>Sobre Mim</h1>
+    <section class="section-sobreMim">
+        <div class="sobreMim">
+            <img src="./images/adriann.jpg" alt="Imagem">
+            <h2>Estudar programação vai muito além de dominar uma linguagem de computador ou criar linhas 
+                de código. É uma jornada que nos leva a explorar os limites da criatividade e da 
+                solução de problemas. Ao mergulhar nesse mundo fascinante, descobrimos que a 
+                programação é uma ferramenta poderosa para moldar o futuro e impactar 
+                positivamente o mundo ao nosso redor.
+
+                <br><br>
+                Primeiramente, estudar programação nos permite desbloquear um vasto leque de 
+                oportunidades profissionais. Em um mundo cada vez mais digitalizado, a 
+                demanda por profissionais qualificados em tecnologia da informação só cresce. 
+                A capacidade de desenvolver software e aplicativos não apenas nos torna mais 
+                competitivos no mercado de trabalho, mas também abre portas para carreiras 
+                empolgantes e bem remuneradas em áreas como desenvolvimento de software, 
+                análise de dados, segurança cibernética e inteligência artificial.
+            </h2>
+        </div>
+    </section>
+
+    <h1 class="Habilidades">Habilidades</h1>
+    <section class="section-habilidades">
+        <div class="div-habilidades">
+                <img src="./icons/html-icon.png" alt="">
+            
+                <img src="./icons/css-icon.png" alt="">
+
+                <img src="./icons/js-icon.png" alt="">
+
+                <img src="./icons/php-icon.png" alt="">
+
+                <img src="./icons/sql-icon.png" alt="">
+
+                <img src="./icons/react-icon.png" alt="">
+
+                <img src="./icons/git-icon.png" alt="">
+
+        </div>
+    </section>
+
+    <h1 class="projetos-title">Projetos</h1>
+    <section class="section-projetos">
+        <main>
+            <div class="projetos">
+                <img src="./images/mc.jpg" alt="Projeto 1">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum fuga laboriosam 
+                    tempore vel magnam! Quas minima aliquam aut reiciendis iure dolorem soluta 
+                    aperiam libero nobis cumque, quia ad iste. Consequatur!
+                </p>
+                <img class="icon-projetos" src="./icons/css-icon.png" alt="">
+                <img class="icon-projetos" src="./icons/html-icon.png" alt="">
+            </div>
+
+            <div class="projetos">
+                <img src="./images/mc.jpg" alt="Projeto 1">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum fuga laboriosam 
+                    tempore vel magnam! Quas minima aliquam aut reiciendis iure dolorem soluta 
+                    aperiam libero nobis cumque, quia ad iste. Consequatur!
+                </p>
+                <img class="icon-projetos" src="./icons/react-icon.png" alt="">
+                <img class="icon-projetos" src="./icons/js-icon.png" alt="">
+            </div>
+
+            <div class="projetos">
+                <img src="./images/mc.jpg" alt="Projeto 1">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum fuga laboriosam 
+                    tempore vel magnam! Quas minima aliquam aut reiciendis iure dolorem soluta 
+                    aperiam libero nobis cumque, quia ad iste. Consequatur!
+                </p>
+                <img class="icon-projetos" src="./icons/react-icon.png" alt="">
+                <img class="icon-projetos" src="./icons/js-icon.png" alt="">
+            </div>
+        </main>
+    </section>
+
+    <footer class="footer">
+        <div class="div-form">
+            <form action="" class="contact-form">
+                <h2>Se interessou, me contate</h2>
+                <input type="text" placeholder="Nome completo">
+                <input type="text" placeholder="Email">
+                <textarea id="myTextarea" rows="4" cols="50" placeholder="Motivo do contato"></textarea>
+                <input type="submit" value="Contatar">
+            </form>
+        </div>
+        <div class="other-content"></div>
+    </footer>
+
+    <span>
+        <h6>Todos os direitos reservados</h6>
+    </span>
+    
+    
+    <script>
+        window.addEventListener('scroll', function() {
+            var header = document.getElementById('myHeader');
+            var scrollPosition = window.scrollY;
+
+            if (scrollPosition > 50) { 
+                header.classList.add('bg-scroll'); 
+            } else {
+                header.classList.remove('bg-scroll'); 
+            }
+        });
+
+    </script>
+</body>
+</html>
