@@ -5,19 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portifolio</title>
     <link rel="stylesheet" href="style.css">
-    <script src=""></script>
+    <script src="script.js" async></script>
 </head>
 <body>
 
     <div class="container-header">
         <header class="bg-scroll" id="myHeader">
-            <nav>
+            <nav class="nav-item">
                 <ul>
                     <li><a href="#" data-text="Sobre mim">Sobre mim</a></li>
                     <li><a href="#" data-text="Habilidades">Habilidades</a></li>
                     <li><a href="#" data-text="Projetos">Projetos</a></li>
                 </ul>
             </nav>
+
+            <!-- Responsivo mobile ----------------------------------------------------- -->
+            <div class="mobile-menu-icon">
+                <button onclick="menuShow()"><img src="./icons/list.svg" alt="" class="mobile-icon"></button>
+            </div>
+
+            <div class="mobile-menu">
+                <ul>
+                    <li><a href="#" data-text="Sobre mim">Sobre mim</a></li>
+                    <li><a href="#" data-text="Habilidades">Habilidades</a></li>
+                    <li><a href="#" data-text="Projetos">Projetos</a></li>
+                </ul>
+            </div>
         </header>
     </div>
     
@@ -27,8 +40,8 @@
         </div>
     </section>
 
-    <h1>Sobre Mim</h1>
-    <section class="section-sobreMim">
+    <h1 class="hidden">Sobre Mim</h1>
+    <section class="section-sobreMim hidden" id="particles-js">
         <div class="sobreMim">
             <img src="./images/adriann.jpg" alt="Imagem">
             <h2>Estudar programação vai muito além de dominar uma linguagem de computador ou criar linhas 
@@ -49,8 +62,8 @@
         </div>
     </section>
 
-    <h1 class="Habilidades">Habilidades</h1>
-    <section class="section-habilidades">
+    <h1 class="Habilidades hidden">Habilidades</h1>
+    <section class="section-habilidades hidden">
         <div class="div-habilidades">
                 <img src="./icons/html-icon.png" alt="">
             
@@ -66,11 +79,15 @@
 
                 <img src="./icons/git-icon.png" alt="">
 
+                <img src="./icons/angular.png" alt="">
+
+                <img src="./icons/ts.png" alt="">
+
         </div>
     </section>
 
-    <h1 class="projetos-title">Projetos</h1>
-    <section class="section-projetos">
+    <h1 class="projetos-title hidden">Projetos</h1>
+    <section class="section-projetos hidden">
         <main>
             <div class="projetos">
                 <img src="./images/mc.jpg" alt="Projeto 1">
@@ -81,7 +98,7 @@
                 <img class="icon-projetos" src="./icons/css-icon.png" alt="">
                 <img class="icon-projetos" src="./icons/html-icon.png" alt="">
             </div>
-
+            
             <div class="projetos">
                 <img src="./images/mc.jpg" alt="Projeto 1">
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum fuga laboriosam 
@@ -104,7 +121,7 @@
         </main>
     </section>
 
-    <footer class="footer">
+    <footer class="footer hidden">
         <div class="div-form">
             <form action="" class="contact-form">
                 <h2>Se interessou, me contate</h2>
@@ -127,13 +144,29 @@
             var header = document.getElementById('myHeader');
             var scrollPosition = window.scrollY;
 
-            if (scrollPosition > 50) { 
+            if (scrollPosition >= 20) { 
                 header.classList.add('bg-scroll'); 
             } else {
                 header.classList.remove('bg-scroll'); 
             }
         });
 
+
+        function menuShow() {
+            let menuMobile = document.querySelector('.mobile-menu');
+
+            if (menuMobile.classList.contains('open')) {
+                menuMobile.classList.remove('open');
+                document.querySelector('.icon').src = "./icons/list.svg";
+                document.querySelector('.mobile-menu-icon button').classList.remove('open'); // Remover classe 'open' do botão
+            } else {
+                menuMobile.classList.add('open');
+                document.querySelector('.icon').src = "./icons/x-lg.svg";
+                document.querySelector('.mobile-menu-icon button').classList.add('open'); // Adicionar classe 'open' ao botão
+            }
+        }
+
     </script>
+    
 </body>
 </html>
